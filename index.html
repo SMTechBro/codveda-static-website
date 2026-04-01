@@ -1,102 +1,589 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codveda Technology - Home</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Codveda</title>
+
+    <!-- Google Fonts: Inter & Playfair Display for Serifs -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS Link -->
+    <link rel="stylesheet" href="assets/aos/dist/aos.css" />
+
+    <!-- Favicon Link -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">Codveda<span>Tech</span></div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>
-          Building the Future of Technology <br />
-          <span>with Creativity & Innovation</span>
-        </h1>
-        <p>
-          We empower businesses with world-class tech solutions in Web
-          Development, UI/UX Design, and more.
-        </p>
-        <a href="contact.html" class="btn">Get Started</a>
+
+    <section class="hero-section">
+      <!-- Particle/Star Background Effect -->
+      <div class="stars"></div>
+
+      <nav class="navbar">
+        <div data-aos="flip-left" class="logo-container">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </div>
+
+        <ul data-aos="fade-down" class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="public/about.html">About</a></li>
+          <li><a href="public/contact.html">Contact</a></li>
+          <li>
+            <a href="public/contact.html" class="btn-primary mobile-only"
+              >Get Started</a
+            >
+          </li>
+        </ul>
+
+        <div data-aos="flip-right" class="nav-actions">
+          <a href="public/contact.html" class="btn-primary desktop-only"
+            >Get Started</a
+          >
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fa fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div data-aos="fade-right" class="hero-content">
+          <!-- Trust Badge -->
+          <div class="trust-badge">
+            <div class="avatars">
+              <span class="avatar" style="background: #00d2ff"></span>
+              <span class="avatar" style="background: #9d50bb"></span>
+              <span class="avatar" style="background: #ff4b2b"></span>
+            </div>
+            <p>Trusted by 500+ Global Clients</p>
+          </div>
+
+          <h1>Transform Your <br /><span>Digital</span></h1>
+          <h2 class="italic-text">Vision Into Reality</h2>
+
+          <p class="description">
+            We craft innovative digital solutions that drive business growth and
+            deliver exceptional user experiences through cutting-edge technology
+            and creative excellence.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#ourWork" class="btn-white"
+              >Explore Our Work <i class="fa fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Testimonial Card -->
+
+        <div data-aos="fade-left" class="testimonial-card">
+          <div class="box">
+            <p>
+              "Empowering businesses with transformative technology solutions
+              that bridge the gap between innovation and implementation,
+              creating digital experiences that resonate and deliver measurable
+              results."
+            </p>
+            <div class="user-info">
+              <div class="user-img"></div>
+              <div>
+                <h4>Codveda Team</h4>
+                <span>Technology Experts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down">
+        <a href="#about">
+          <i class="fa fa-arrow-down"></i>
+        </a>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-      <h2>Our Services</h2>
-      <div class="service-row">
-        <div class="card">
-          <figure>💻</figure>
-          <h3>Web Development</h3>
-          <p>Responsive and modern websites that scale.</p>
-          <button>Hire now</button>
+    <!-- About Codveda Section -->
+    <section class="info-section" id="about">
+      <div class="container">
+        <!-- Left Content -->
+        <div data-aos="fade-left" class="info-content">
+          <span class="badge">ABOUT CODVEDA</span>
+          <h1>
+            Building Tomorrow's <br /><span class="teal-text">Technology</span>
+            Today
+          </h1>
+
+          <p class="description">
+            At Codveda Technologies, we are passionate about creating innovative
+            digital solutions that transform businesses and elevate user
+            experiences. Our team of expert developers, designers, and
+            strategists work collaboratively to deliver cutting-edge technology
+            solutions.
+          </p>
+          <p class="description">
+            With years of experience and a commitment to excellence, we help
+            businesses navigate the digital landscape and achieve their goals
+            through strategic technology implementation.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <h2>500+</h2>
+              <p>Projects Delivered</p>
+            </div>
+            <div class="stat-box">
+              <h2>50+</h2>
+              <p>Team Members</p>
+            </div>
+            <div class="stat-box">
+              <h2>98%</h2>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <figure>🎨</figure>
-          <h3>UI/UX Design</h3>
-          <p>Seamless designs for better user experiences.</p>
-          <button>Hire now</button>
-        </div>
-        <div class="card">
-          <figure>📱</figure>
-          <h3>Mobile Apps</h3>
-          <p>Cross-platform mobile applications.</p>
-          <button>Hire now</button>
-        </div>
-        <div class="card">
-          <figure>⚙️</figure>
-          <h3>Software Solutions</h3>
-          <p>Custom digital solutions for your business.</p>
-          <button>Hire now</button>
+
+        <!-- Right Testimonial Card -->
+        <div data-aos="fade-right" class="testimonial-wrapper">
+          <div class="dark-card">
+            <div class="card-header">
+              <span class="card-badge">CLIENT TESTIMONIAL</span>
+              <i class="fa fa-ellipsis-h"></i>
+            </div>
+
+            <i class="fa fa-quote-left quote-icon"></i>
+
+            <p class="testimonial-text">
+              Working with Codveda has been transformative for our business.
+              Their expertise and dedication to excellence delivered results
+              beyond our expectations.
+            </p>
+
+            <div class="card-footer">
+              <div class="user-meta">
+                <div class="user-circle"></div>
+                <div class="user-details">
+                  <strong>Sarah Johnson</strong>
+                  <span>CEO, TechCorp Inc.</span>
+                </div>
+              </div>
+              <a href="#" class="read-more"
+                >Read More <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <!-- Why Choose Us -->
-    <section class="why">
-      <div class="why-col">
-        <h2>Why Choose Codveda?</h2>
-        <ul>
-          <li>✔️ Experienced Professionals</li>
-          <li>✔️ Affordable & Flexible Solutions</li>
-        </ul>
+    <!-- Our Expertise Section -->
+    <section class="services-section">
+      <div data-aos="fade-down" class="services-header">
+        <span class="sub-badge">OUR EXPERTISE</span>
+        <h2>Cutting-Edge Solutions</h2>
+        <h3 class="italic-serif">for Modern Businesses</h3>
       </div>
-      <div class="why-col">
-        <h2>Our Promise</h2>
-        <ul>
-          <li>✔️ Customer-First Approach</li>
-          <li>✔️ On-Time Delivery</li>
-        </ul>
+
+      <div class="services-grid">
+        <!-- Web Development -->
+        <div data-aos="fade-up" class="service-card blue">
+          <div class="icon-box"><i class="fa fa-code"></i></div>
+          <h4>Web Development</h4>
+          <p>
+            Custom web applications built with modern frameworks and
+            technologies, delivering scalable and performant solutions tailored
+            to your business needs.
+          </p>
+          <a href="#" class="learn-link" data-service="web"
+            >Learn More <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div data-aos="fade-up" class="service-card green">
+          <div class="icon-box"><i class="fa fa-mobile-screen-button"></i></div>
+          <h4>Mobile Apps</h4>
+          <p>
+            Native and cross-platform mobile applications that provide seamless
+            user experiences across iOS and Android devices with cutting-edge
+            features.
+          </p>
+          <a href="#" class="learn-link" data-service="mobile"
+            >Learn More <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div data-aos="fade-up" class="service-card dark">
+          <div class="icon-box"><i class="fa fa-palette"></i></div>
+          <h4>UI/UX Design</h4>
+          <p>
+            Beautiful and intuitive user interfaces designed with user-centric
+            approach, ensuring exceptional usability and engaging visual
+            experiences.
+          </p>
+          <a href="#" class="learn-link" data-service="design"
+            >Learn More <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <!-- Cloud Solutions -->
+        <div data-aos="fade-up" class="service-card orange">
+          <div class="icon-box"><i class="fa fa-cloud"></i></div>
+          <h4>Cloud Solutions</h4>
+          <p>
+            Scalable cloud infrastructure and deployment strategies that ensure
+            high availability, security, and optimal performance for your
+            applications.
+          </p>
+          <a href="#" class="learn-link" data-service="cloud"
+            >Learn More <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
       </div>
-      <div class="why-col">
-        <h2>Extra Benefits</h2>
-        <ul>
-          <li>✔️ Continuous Support</li>
-          <li>✔️ Innovative Solutions</li>
-        </ul>
+
+      <!-- Pop up Modal for Service Details -->
+      <div data-aos="fade-down" id="service-modal" class="modal-overlay">
+        <div class="modal-content">
+          <button id="close-modal" class="close-modal-btn">&times;</button>
+          <div id="modal-body"></div>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>
-        &copy; 2025 <span class="logo">Codveda<span>Tech</span></span> | All
-        Rights Reserved
-      </p>
+    <!-- Our Work Section -->
+
+    <section class="portfolio-section" id="ourWork">
+      <div data-aos="fade-right" class="portfolio-header">
+        <span class="sub-badge">Our Work</span>
+        <h2>Featured Projects</h2>
+        <h3 class="italic-serif">& Case Studies</h3>
+      </div>
+
+      <!-- Visible Projects (Initial 4) -->
+      <div class="project-grid" id="project-container">
+        <div data-aos="fade-left" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-1.png&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>E-Commerce Platform</h4>
+            <p>Web Development</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-2.png&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>Healthcare App</h4>
+            <p>Mobile Development</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-3.png&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>Financial Dashboard</h4>
+            <p>UI/UX Design</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-4.png&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>Social Network</h4>
+            <p>Full Stack</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Projects Container -->
+      <div class="project-grid hidden-projects" id="extra-projects">
+        <!-- Add your 10+ projects here -->
+        <div data-aos="fade-right" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-5.jpg&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>AI SaaS Platform</h4>
+            <p>Web App</p>
+          </div>
+        </div>
+        <div data-aos="fade-right" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-6.jpg&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>International Airport App</h4>
+            <p>Mobile App</p>
+          </div>
+        </div>
+        <div data-aos="fade-right" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-7.jpg&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>Trading Platform</h4>
+            <p>UI/UX Design</p>
+          </div>
+        </div>
+        <div data-aos="fade-right" class="project-card">
+          <div
+            class="project-img"
+            style="
+              background-image: url(&quot;../assets/images/fp-image-8.jpg&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h4>Product Landing Page</h4>
+            <p>Frontend Development</p>
+          </div>
+        </div>
+        <!-- ... Repeat for as many projects as you want ... -->
+      </div>
+
+      <div class="portfolio-footer">
+        <button id="view-all-btn" class="btn-dark">View All Projects</button>
+      </div>
+    </section>
+
+    <!-- Experience Our Animations Section -->
+
+    <section class="animation-showcase">
+      <div data-aos="fade-down" class="header-content">
+        <h2>( Experience Our Animations )</h2>
+        <div class="rating-badge">
+          <i class="fa fa-star"></i> 4.9/5 Client Rating
+        </div>
+      </div>
+
+      <div class="slider-container">
+        <!-- Main Display Card -->
+        <div data-aos="zoom-out" class="main-card" id="animation-card">
+          <div class="card-inner">
+            <div class="card-icon" id="slider-icon">
+              <i class="fa fa-magic"></i>
+            </div>
+            <h3 id="slider-title">Smooth Transitions</h3>
+            <p id="slider-desc">
+              Fluid page transitions and element animations
+            </p>
+
+            <!-- Pagination Dots -->
+            <div class="dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="slider-nav">
+          <button data-aos="fade-right" id="prevBtn" class="nav-btn">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button data-aos="fade-left" id="nextBtn" class="nav-btn dark-btn">
+            <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Features Row -->
+      <div class="features-row">
+        <div data-aos="fade-up" class="feature-item">
+          <i class="fa fa-bolt"></i>
+          <h4>Fast Performance</h4>
+          <p>Optimized animations for smooth 60fps</p>
+        </div>
+        <div data-aos="fade-up" class="feature-item">
+          <i class="fa fa-mobile-alt"></i>
+          <h4>Responsive Design</h4>
+          <p>Works perfectly on all devices</p>
+        </div>
+        <div data-aos="fade-up" class="feature-item">
+          <i class="fa fa-code"></i>
+          <h4>Clean Code</h4>
+          <p>Well-structured and maintainable</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Section -->
+
+    <section class="brand-showcase">
+      <div data-aos="fade-left" class="showcase-container">
+        <div class="logo-track">
+          <div class="logo-slide">
+            <img src="assets/images/spotify-logo.png" alt="Spotify" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/slack-logo.png" alt="Slack" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/adobe-logo.png" alt="Adobe" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/microsoft-logo.png" alt="Microsoft" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/intercom-logo.png" alt="Intercom" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/notion-logo.png" alt="Notion" />
+          </div>
+
+          <div class="logo-slide">
+            <img src="assets/images/spotify-logo.png" alt="Spotify" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/slack-logo.png" alt="Slack" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/adobe-logo.png" alt="Adobe" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/microsoft-logo.png" alt="Microsoft" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/intercom-logo.png" alt="Intercom" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/images/notion-logo.png" alt="Notion" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Top Section: Grid -->
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div data-aos="fade-right" class="footer-col brand-col">
+            <img src="assets/images/logo.png" alt="Logo" class="footer-logo" />
+            <p>
+              Empowering businesses with innovative technology solutions that
+              drive growth and deliver exceptional results.
+            </p>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div data-aos="fade-down" class="footer-col">
+            <h4>NEWSLETTER</h4>
+            <p id="newsletter-status">Subscribe to get the latest updates</p>
+            <form id="newsletter-form" class="newsletter-form">
+              <input
+                type="email"
+                id="newsletter-input"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" id="newsletter-btn">
+                <i class="fa fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div data-aos="fade-up" class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="public/about.html">About Us</a></li>
+              <li><a href="public/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Connect Column -->
+          <div data-aos="fade-left" class="footer-col">
+            <h4>CONNECT</h4>
+            <ul class="footer-socials">
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <!-- Bottom Section: Copyright & Legal -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Codveda Technologies. All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Website Builder</a>
+          </div>
+        </div>
+
+        <!-- Big Background Text -->
+        <div class="footer-watermark">CODVEDA</div>
+      </div>
     </footer>
+
+    <!-- JS Link -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- AOS Animation JS Link -->
+    <script src="assets/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
