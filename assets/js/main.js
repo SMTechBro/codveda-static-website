@@ -235,42 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Arrow Top Button Logic
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTopBtn = document.getElementById("backToTop");
-  const heroSection = document.querySelector(".hero-section"); // Matches your home hero class
-
-  // 1. Logic to show/hide button based on Hero Section visibility
-  const observerOptions = {
-    root: null,
-    threshold: 0, // Trigger as soon as even 1px of hero is gone
-    rootMargin: "-100px 0px 0px 0px", // Optional: Wait until 100px past hero
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // If hero is NOT intersecting (is out of view), show button
-      if (!entry.isIntersecting) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
-      }
-    });
-  }, observerOptions);
-
-  if (heroSection) {
-    observer.observe(heroSection);
-  }
-
-  // 2. Click functionality to scroll back to Hero
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-});
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = [
@@ -331,3 +295,43 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider(currentIndex);
   });
 });
+
+// Arrow Top Button Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  // Select the hero section based on the current page's class
+  const heroSection = document.querySelector(
+    ".hero-section, .about-hero, .contact-hero",
+  );
+
+  if (heroSection && backToTopBtn) {
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: "-100px 0px 0px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // If the user has scrolled past the hero section, show the button
+        if (!entry.isIntersecting) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(heroSection);
+  }
+
+  // Scroll to top functionality
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
