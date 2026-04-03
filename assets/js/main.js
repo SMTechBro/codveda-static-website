@@ -235,6 +235,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Arrow Top Button Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
+  const heroSection = document.querySelector(".hero-section"); // Matches your home hero class
+
+  // 1. Logic to show/hide button based on Hero Section visibility
+  const observerOptions = {
+    root: null,
+    threshold: 0, // Trigger as soon as even 1px of hero is gone
+    rootMargin: "-100px 0px 0px 0px", // Optional: Wait until 100px past hero
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // If hero is NOT intersecting (is out of view), show button
+      if (!entry.isIntersecting) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+  }, observerOptions);
+
+  if (heroSection) {
+    observer.observe(heroSection);
+  }
+
+  // 2. Click functionality to scroll back to Hero
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const slides = [
     {
